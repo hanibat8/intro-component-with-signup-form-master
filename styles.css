@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap");
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: initial;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "PT Serif", serif;
+    font-weight: 300;
+    line-height: 1.4;
+    height: 100vh;
+    background-image: url(images/bg-intro-mobile.png);
+    background-repeat: no-repeat;
+    background-color: rgb(233, 112, 112);
+}
+
+.container {
+    max-width: 1200px;
+    width: 80%;
+    margin: 0 auto;
+    color: rgb(255, 255, 255);
+}
+
+.attribution {
+    margin-top: 1rem;
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.banner {
+    background-color: rgb(90, 73, 170);
+    padding: 1.8rem 2rem;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    box-shadow: 0 1.1rem 1.1rem rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+    width: 100%;
+    padding: 1.8rem 0;
+    background-color: rgb(102, 209, 125);
+    color: #ffff;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.04);
+}
+
+.condition {
+    margin-top: 0.8rem;
+    text-align: center;
+    padding: 0 0.5rem;
+    color: rgb(172, 162, 162);
+}
+
+.condition span {
+    color: rgb(233, 112, 112);
+    font-weight: 700;
+}
+
+.banner span {
+    font-weight: 700;
+    display: block;
+}
+
+.headings {
+    margin: 5rem 0;
+    margin-top: 7rem;
+    font-size: 1.4rem;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.headings h1 {
+    line-height: 1.1;
+    font-size: 2.5rem;
+    margin-bottom: 1.8rem;
+}
+
+.error {
+	width: 100%;
+	padding: 0;
+	display: block;
+	color: rgb(231, 26, 26);
+}
+
+.error.active {
+    padding: .5rem;
+    margin-bottom: 1rem;
+}
+
+.form {
+    margin-top: 3rem;
+    padding: 2rem;
+    background-color: #ffff;
+    border-radius: 10px;
+}
+
+.form input {
+    appearance: none;
+    width: 100%;
+    padding: 1rem 0;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgb(209, 204, 204);
+    border-radius: 2px;
+    transition: all 0.2s;
+}
+
+.form input.active{
+    border : 1px solid rgb(231, 26, 26);
+    margin-bottom: 0;
+}
+
+@media (min-width: 700px) {
+    html {
+        font-size: 72%;
+    }
+
+    .banner {
+        padding: 1.5rem 2rem;
+    }
+
+    .banner span {
+        display: inline;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: minmax(8rem,1.5fr) 2rem minmax(10rem,2fr);
+        height: 100vh;
+        align-items: center;
+    }
+
+    .content {
+        grid-column: 3/4;
+    }
+
+    footer {
+        display: none;
+    }
+
+    .headings {
+        grid-column: 1/2;
+        text-align: start;
+    }
+
+    .headings h1 {
+        font-size: 3rem;
+    }
+
+    .form {
+        margin-top: 1rem;
+        padding: 3.5rem;
+    }
+}
+
+@media (min-width: 900px) {
+    html {
+        font-size: 80%;
+    }
+
+    .container {
+        grid-template-columns: 1fr 8rem 1fr;
+    }
+}
